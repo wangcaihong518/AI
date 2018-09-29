@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>AI助手</title>
+   	<script src="js/rem.js"></script>
+   	<!--<link rel="stylesheet" href="css/ai.css" />-->
+   		
+    <!--<script src="./js/ai.js"></script>-->
+    <style>
+    	body ,div,margin ,h3{
+    		margin: 0;
+    		padding:0;
+    	}
+    	
+    	body {
+    		background-color: #F4F4F4;
+    	}
+    	/*.i_one {
+    		width: 7.5rem;
+    		height: 0.4rem;
+    		position: absolute;
+    		
+    	}*/
+    	.i_two {
+    		width: 3.2rem;
+    		height: 3.18rem;
+    		position: absolute;
+    		left: 2rem;
+    		top:2rem;
+    	}
+    	h3 {
+    		font-size: 0.26rem;
+    		color: #95C394;
+    		position: absolute;
+    		top:6rem;
+    		left:2rem;
+    	}
+    	
+    	p {
+    		font-size: 0.22rem;
+    		text-indent: 2.4rem;
+    		/*margin-top: -0.1rem;*/
+    		position: absolute;
+    		top:6.5rem;
+    		color: #929292;
+    	}
+    	.input {
+    		width: 4rem;
+    		height: 0.84rem;
+    		/*margin: 1.9rem auto;*/
+    		position: absolute;
+    		left: 1.6rem;
+    		top:8rem;
+    		border-bottom: 0.02rem solid #E2E2E2;
+    		display: flex;
+    		align-items: center;
+    		
+    	}
+    	.icon {
+    		width:0.2rem;
+    		height: 0.1rem;
+    		background-color:#F2C938;
+    		border-radius :0.2rem;
+    		margin-right: 0.2rem;
+    		box-shadow: 0 0.01rem 0.02rem 0.02rem #F2C938;
+    	}
+    	input {
+    		border:none;
+    		background-color:  #F4F4F4;
+    		outline: none;
+    	}
+    	
+    	#bt {
+    		border:none;
+    		width:3.7rem;
+    		height: 0.8rem;
+    		background-color: #E8E8E8;
+    		border-radius:0.4rem;
+    		/*margin-left:2rem; ;*/
+    		position: absolute;
+    		top:11rem;
+    		left: 2rem;
+    	}
+    	.input p{
+    		display: none;
+    		color:red;
+    		position: absolute;
+    		top:-0.01rem;
+    		left:-2.02rem;
+    		font-size: 0.12rem;
+    	}
+    	
+    </style>
+</head>
+<body>
+	<!--<img class="i_one" src="./img/1.png" alt="" />-->
+	<img class="i_two"src="./img/2.png" alt="" />
+	<h3>请通过人脸识别验证您的身份</h3>
+	<p>请按照以下步骤完成脸部识别</p>
+	<div class="input">
+		<div class="icon"></div><input type="text" value="" placeholder="请输入您的姓名"/><p class="pp">请输入正确的用户名</p><p class="p">用户名不能为空</p>
+	</div>  
+	<a href="success.html"><button id="bt">开始识别</button></a>
+<script>
+	var user=document.getElementsByTagName("input")[0];
+	var btn=document.getElementById("bt");
+	var p=document.getElementsByClassName("p")[0];
+	var pp=document.getElementsByClassName("pp")[0]
+	btn.disabled=true;
+	user.onfocus=function(){
+		user.placeholder=" ";
+		p.style.display="none";
+		pp.style.display="none";
+	}
+	user.onblur=function(){
+		if(user.value==""){	
+			btn.disabled=true;
+			p.style.display="block";			
+			btn.style.backgroundColor="#E8E8E8";	
+		}		
+		else {if(user.value=="wang"){
+			p.style.display="none";
+			btn.style.backgroundColor="green";
+			btn.style.opacity="0.8";
+			btn.style.transition=".2s";
+			btn.disabled=false;
+		}else{
+			pp.style.display="block";
+		}
+	}
+		
+	}
+	
+</script>
+</body>
+
+</html>

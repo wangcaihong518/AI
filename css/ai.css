@@ -1,0 +1,78 @@
+div,img,h3,button {
+	margin: 0;
+	padding: 0;
+	border:none;
+}
+body {
+	background-color: #FBFBFB;
+	/*overflow: hidden;*/
+}
+img {
+	display: block;
+	width: 2.9rem;
+	height: 2.82rem;
+	/*margin: 1.96rem auto 0;*/
+	position: absolute;
+	top: 1.96rem;
+	left:2.2rem;
+	
+	}  
+h3 {
+	font-size: 12px;
+	text-align: center;
+	line-height: 1.36rem;
+	position:relative;
+	left: 3rem;
+	top: 1rem;
+	
+}          
+.btn {
+	width: 4.92rem;
+	height: 2.22rem;
+	/*margin: 2rem 1.25rem ;*/
+	position:absolute;
+	left: 1.25rem;
+	top: 4rem;
+	padding: 0 auto;
+	box-sizing: border-box;
+	
+}
+/*.i_one {
+    		width: 7.5rem;
+    		height: 0.4rem;
+    		position: absolute;
+    		
+    	}*/
+.b {
+	width: 4.68rem;
+	height: 0.7rem;
+	border-radius: 0.35rem;
+	background-color: #78BDFE;
+	margin:auto;
+	color: #FFF;
+	font-weight:bold;
+}
+.b:first-child {
+	background-image: -webkit-linear-gradient(left,#62A4FD,#7BC0FE);
+	background-image: -moz-linear-gradient(left,#62A4FD,#7BC0FE);
+	background-image: -o-linear-gradient(left,#62A4FD,#7BC0FE);
+	background-image: -ms-linear-gradient(left,#62A4FD,#7BC0FE);
+	background-image: linear-gradient(left,#62A4FD,#7BC0FE);
+	box-shadow: 0 0.1rem 0.21rem 0.1rem #A7D2FA;
+}
+.b:last-child {
+	background-image: -webkit-linear-gradient(left,#90CB81,#A1DE51);
+	background-image: -moz-linear-gradient(left,#90CB81,#A1DE51);
+	background-image: -o-linear-gradient(left,#90CB81,#A1DE51);
+	background-image: -ms-linear-gradient(left,#90CB81,#A1DE51);
+	background-image: linear-gradient(left,#90CB81,#A1DE51);
+	box-shadow: 0 0.1rem 0.21rem 0.1rem #B4E5B6;
+}
+ .box {
+   	position: absolute;
+   	top: 4rem;
+   } 
+   button:hover {
+   	opacity:0.8;
+   	transition: .2s;
+   }
